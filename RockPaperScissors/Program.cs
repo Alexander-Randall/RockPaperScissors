@@ -8,10 +8,13 @@ namespace RockPaperScissors
         {
             string inputPlayer, inputCPU;
             int randomInt;
+            int scorePlayer = 0;
+            int scoreCPU = 0;
 
             Console.WriteLine("Choose Rock, Paper, or Scissors");
             inputPlayer = Console.ReadLine();
             inputPlayer = inputPlayer.ToUpper();
+            
 
             Random rnd = new Random();
             randomInt = rnd.Next(1, 4);
@@ -21,7 +24,7 @@ namespace RockPaperScissors
                 case 1:
                     inputCPU = "Rock";
                     Console.WriteLine("Computer chose Rock");
-                    if (playerInput == "Rock")
+                    if (inputPlayer == "Rock")
                     {
                         Console.WriteLine("Draw!\n\n");
                     }
@@ -39,16 +42,16 @@ namespace RockPaperScissors
                     break;
                 case 2:
                     inputCPU = "Paper";
-                    if (playerInput == "Rock")
+                    if (inputPlayer == "Rock")
                     {
                         Console.Writeline("CPU won\n\n");
                         scoreCPU++;
                     }
-                    else if (inputPlayer == "Paper");
+                    else if (inputPlayer == "Paper")
                     {
                         Console.Writeline("Draw!\n\n");
                     }
-                    else if (inputPlayer == "Scissors") ;
+                    else if (inputPlayer == "Scissors") 
                     {
                         Console.Writeline("Player wins!\n\n");
                     break;
