@@ -1,67 +1,75 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace RockPaperScissors
+class Program
 {
-    class Program
+    enum Selection
     {
-        static void Main(string[] args)
+        Rock, Paper, Scissors
+    }
+
+    static void Main(string[] args)
+    {
+        bool keepPlaying = true;
+
+        while (keepPlaying)
         {
-            string inputPlayer, inputCPU;
-            int randomInt;
-            int scorePlayer = 0;
-            int scoreCPU = 0;
-
-            Console.WriteLine("Choose Rock, Paper, or Scissors");
-            inputPlayer = Console.ReadLine();
-            inputPlayer = inputPlayer.ToUpper();
+            GetPlayerInput();
             
-
-            Random rnd = new Random();
-            randomInt = rnd.Next(1, 4);
-
-            switch (randomInt)
-            {
-                case 1:
-                    inputCPU = "Rock";
-                    Console.WriteLine("Computer chose Rock");
-                    if (inputPlayer == "Rock")
-                    {
-                        Console.WriteLine("Draw!\n\n");
-                    }
-                    else if (inputPlayer == "Paper")
-                    {
-                        Console.WriteLine("Player Wins\n\n");
-                        scorePlayer++;
-                    }
-                    else if (inputPlayer == "Scissors");
-                    {
-                        Console.WriteLine("CPU wins! \n\n");
-                        scoreCPU++;
-
-                    }
-                    break;
-                case 2:
-                    inputCPU = "Paper";
-                    if (inputPlayer == "Rock")
-                    {
-                        Console.Writeline("CPU won\n\n");
-                        scoreCPU++;
-                    }
-                    else if (inputPlayer == "Paper")
-                    {
-                        Console.Writeline("Draw!\n\n");
-                    }
-                    else if (inputPlayer == "Scissors") 
-                    {
-                        Console.Writeline("Player wins!\n\n");
-                    break;
-                case 3:
-                    inputCPU = "Scissors";
-                    break;
-                default:
-                    Console.WriteLine("Invalid Entry");
-                    break;
-            }
+            keepPlaying = false;
         }
     }
+
+    static Selection GetPlayerInput()
+    {
+        bool validInput = false;
+        Selection toReturn = Selection.Paper;
+        while (!validInput)
+        {
+            Console.WriteLine("Select: Rock, Paper, or Scissors");
+            string playerInput = Console.ReadLine();
+
+            if (playerInput.ToLower() == "rock")
+            {
+                toReturn = Selection.Rock;
+                validInput = true;
+            }
+            else if (playerInput.ToLower() == "paper")
+            {
+                toReturn = Selection.Paper;
+                validInput = true;
+            }
+            else if (playerInput.ToLower() == "scissors")
+            {
+                toReturn = Selection.Scissors;
+                validInput = true;
+            }
+            else
+            {
+                Console.WriteLine("Entry invalid");
+            }
+            
+            
+            if (ComputerInput.ToLower() == "rock")
+            {
+                toReturn = Selection.Rock;
+                validInput = true;
+            }
+            else if (ComputerInput.ToLower() == "paper")
+            {
+                toReturn = Selection.Paper;
+                validInput = true;
+            }
+            else if (ComputerInput.ToLower() == "scissors")
+            {
+                toReturn = Selection.Scissors;
+                validInput = true;
+            }
+        }
+        return toReturn;
+    } 
+        
 }
