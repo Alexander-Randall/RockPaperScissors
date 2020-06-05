@@ -10,3 +10,4 @@ C:\Users\apran\source\repos\RockPaperScissors\RockPaperScissors\obj\Debug\netcor
 C:\Users\apran\source\repos\RockPaperScissors\RockPaperScissors\obj\Debug\netcoreapp3.1\RockPaperScissors.dll
 C:\Users\apran\source\repos\RockPaperScissors\RockPaperScissors\obj\Debug\netcoreapp3.1\RockPaperScissors.pdb
 C:\Users\apran\source\repos\RockPaperScissors\RockPaperScissors\obj\Debug\netcoreapp3.1\RockPaperScissors.genruntimeconfig.cache
+C:\Users\apran\source\repos\RockPaperScissors\RockPaperScissors\obj\Debug\netcoreapp3.1\RockPaperScissors.csprojAssemblyReference.cache
